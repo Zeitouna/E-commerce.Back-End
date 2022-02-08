@@ -21,18 +21,25 @@ router.get("/:id", async (req, res) => {
   // find one category by its `id` value
   // be sure to include its associated Products
   try {
-    const categories = await Category.findByPk(req.params.id, {
+    const category = await Category.findByPk(req.params.id, {
       include: Product,
     });
-    res.json(categories);
+    res.json(category);
   } catch (err) {
     console.log(err);
     res.status(500).json({ msg: "Error while retrieving data" });
   }
 });
 
-router.post("/", (req, res) => {
+router.post("/", async (req, res) => {
   // create a new category
+  try {
+    const category = await Category.create(req.body);
+    res.json(category);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({ msg: "Error while creating a category" });
+  }
 });
 
 router.put("/:id", (req, res) => {
