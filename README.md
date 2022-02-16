@@ -47,10 +47,9 @@ THEN I am able to successfully create, update, and delete data in my database
 
 ## Walkthrough Video
 
-![Walk Video](./assets/ecommerce-backend.gif / GIF)
-You can find the demo here:
-
+You can find the demo here by clicking here:
 [**Walkthrough Video**](https://drive.google.com/file/d/1DTxaYM5bULlGWlMt4F7FhQbPIE1geZ7a/view?usp=sharing)
+![](./assets/ecommerce-backend.gif)
 
 ## Author
 
